@@ -1,6 +1,6 @@
 /* global variables */
 :root {
-	--primary-clr:red;
+	--primary-clr: #495579;
 }
 /* call variable example h1{
 	color: var(--primary-clr)
@@ -236,6 +236,7 @@ animation:rotate-center 0.4s} @keyframes rotate-center{0%{transform:rotate(0)}10
 .project{
 	display: grid;
 	grid-template-columns: auto auto auto;
+	/* overflow: hidden; */
 }
 
 /* ----------------------------------------------
@@ -252,10 +253,6 @@ animation:rotate-center 0.4s} @keyframes rotate-center{0%{transform:rotate(0)}10
 	margin: 0 auto 1rem auto;
 	max-height: 256px;
 	max-width: 256px;
-}
-
-.project-text {
-	text-align: justify;
 }
 
 .box {
@@ -392,12 +389,103 @@ code:before{
 }
 
 	/* filter */
-.show{
+	.filter-sections {
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		grid-gap: 5px;
+	}
+
+	.filterItems {
+		/* background-color: #222f3e; */
+		border-radius: 5px;
+		display: none;
+		overflow: hidden;
+		/* height: 150px; */
+	}
+
+	.filterItems > img{
+		width: 100%;
+	}
+
+	.show {
+		display: block;
+		animation: 350ms showing linear;
+	}
+
+	#sort-options{
+		margin-top: 15px;
+	}
+
+	.btn {
+		border: none;
+		padding: 12px 16px;
+		background-color: #182C61;
+		cursor: pointer;
+		color: #CAD3C8;
+		font-size: 0.8rem;
+		font-family: sans-serif;
+		border-radius: 4px;
+		transition: 350ms;
+	}
+
+	.btn:hover {
+		color: #CAD3C8;
+		background-color: #8395a7;
+	}
+
+	.btn:focus{
+		outline: none;
+		background-color: #3B3B98;
+		color: white;
+		font-weight: bold;
+	}
+
+	.btn:active {
+		background-color: #5f27cd;
+		color: white;
+	}
+
+	@keyframes showing{
+		from{
+			opacity: 0;
+		}to{
+			opacity: 1;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .show{
+	display: block;
 
 }
 .btn{
-
+	cursor: pointer;
 }
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.column{
+	float: left;
+	display: none;
+} */
 /* test section */
 
 .categories {
